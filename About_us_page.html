@@ -1,0 +1,453 @@
+   <!DOCTYPE html>
+<html>
+<head>
+  <title>About_us</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+   <style type="text/css">
+/*.clients{
+  margin-top: 90px;
+}*/
+.Team .card{
+  border-radius: 50%;
+}
+.Team .card-img-top{
+   border-radius: 50%;
+}
+.unit-5 {
+  margin-top: 70px;
+  padding-top: 90px;
+  padding-bottom: 50px;
+  background-size: cover;
+  background-position: center center; }
+  .unit-5.overlay {
+    position: relative; }
+    .unit-5.overlay:before {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.5); }
+  .unit-5 > .container {
+    z-index: 2;
+    position: relative; }
+  .unit-5 h2 {
+    color: #fff;
+    font-size: 3rem; }
+    .unit-7 {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-size: cover;
+  background-position: center center; }
+  .unit-7.overlay {
+    position: relative; }
+    .unit-7.overlay:before {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.5); }
+  .unit-7 > .container {
+    z-index: 2;
+    position: relative; }
+  .unit-7 h2 {
+    color: #fff;
+ }
+ .modal-body .btn{
+    border-radius: 100%;
+    /*font-size: 50px;*/
+  }
+ /* nav{
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }*/
+
+  .btn-circle{
+    width: 170px;
+    height: 170px;
+    /*padding: 10px 16px;
+    border-radius: 50px;*/
+    font-size: 40px;
+    text-align: center;
+    margin-right: 60px;
+  }
+  .modal-body a{
+    text-decoration: none;
+    color: inherit;
+  }
+  .title{
+    font-family: Georgia,serif;
+
+  }
+  .modal-backdrop{
+    position: unset !important;
+  }
+  </style>
+</head>
+<body>
+   <header>
+     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <!-- Pic area -->
+        <a class="navbar-brand p-0" href="#"><img src="Images/logo1.jpg" height="60px" width="80px"></a>
+        <!-- Tittle Area -->
+        <p class="navbar-nav font-weight-bold h5 text-primary title" href="#" >Student Record Management System</p>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto h5">
+            <!-- menu area -->
+            <li class="nav-item text-primary">
+              <a class="nav-link " aria-current="page" href="HOMEPAGE.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">About Us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex ml-auto ">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-outline-primary btn-lg"  data-bs-toggle="modal" data-bs-target="#exampleModal">Login</button>
+            <!-- Modal -->
+          <div class="modal fade" id="exampleModal"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog-centered modal-dialog modal-lg">
+          <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Login Categories</h5>
+                
+              </div>
+             <div class="modal-body">
+                <button class="btn btn-outline-success btn-circle" style="margin-left: 55px;"><a href="LOGIN_STUDENT.html"> Student</a></button>
+                <button class="btn btn-outline-primary btn-circle "><a href="LOGIN_TEACHER.html">Teacher</a></button>
+                <button class="btn btn-outline-warning btn-circle"><a href="LOGIN_ADMIN.html">Admin</a></button>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                
+              </div>
+          </div>
+          </div>
+        </div>
+
+            
+          </form>
+        </div>
+      </div>
+    </nav>
+   </header>
+
+<main>
+      <div class="unit-5 overlay" style="background-image: url('images/apple-bed-computer-34150.jpg');">
+      <div class="container text-center">
+        <h2 class="mb-3">About Us</h2>
+        <h6 class="text-info h5">Thank you for visiting Online Job Portal!</h6>
+      </div>
+    </div>
+
+    <div class="ml-5">
+      <p class="mt-5 mb-3 font-weight-bold h5">About Us</p>
+      <p class=" mr-5 h6 text-secondary">Online Job Portal is a global leader in connecting people to jobs, wherever they are. Online Job Portal has helped people improve their lives with better jobs, and employers find the best talent. Today, the company offers services in more than 40 countries, providing some of the broadest, most sophisticated job seeking, career management, recruitment and talent management capabilities.Online Job Portal continues its pioneering work of transforming the recruiting industry with advanced technology using intelligent digital, social and mobile solutions, including our flagship website monster.com® and a vast array of products and services.</p><br>
+
+      <div class="row">
+            <div class="col-lg-2 col-md-4 col-sm-6 col-12">
+                  <span class="mb-3 font-weight-bold h6 mr-5"> Website</span><br><br>
+                  <span class="mb-3 font-weight-bold h6 mr-5"> Industries</span><br><br>
+                  <span class="mb-3 font-weight-bold h6 mr-5"> Company size</span><br><br>
+                  <span class="mb-3 font-weight-bold h6 mr-5"> Headquarters</span><br><br>
+                  <span class="mb-3 font-weight-bold h6 mr-5"> Type</span><br><br>
+                  <span class="mb-3 font-weight-bold h6 mr-5"> Founded</span><br><br>
+                  <span class="mb-3 font-weight-bold h6 mr-5"> Specialties</span><br><br><br><br>
+                  <span class="mb-3 font-weight-bold h6 mr-5"> Location</span>
+            </div>
+            <div class="col-lg-10 col-md-8 col-sm-6 col-12">
+                  <span ><a href="#"> http://www.OnlineJobPortal.com</a></span><br><br>
+                  <span>Internet</span><br><br>
+                  <span>50 employees</span><br><br>
+                  <span>Kolkata, India</span><br><br>
+                  <span>Public Company</span><br><br>
+                  <span>2020</span><br><br>
+                  <span >talent management, recruitment, recruitment process outsourcing, applicant tracking, career transition,</span><br>
+                  <span> onboarding, online media solutions, performance appraisal, outplacement services, semantic search,</span><br><span> cloud-based search analytics, jobs, recruiting, hiring</span><br><br>
+                  <span> DN 54/A, DN Block, Sector V, Kolkata</span>
+            </div>
+      </div>
+    </div>
+
+    <section>
+         <div class="container-fluid mt-4 mb-0" >
+                    <h1 class="text-center text-capitalize pt-4 text-primary ">Contact Us!</h1>
+                    <h6 class="text-center text-capitalize pt-2 text-dark ">Got questions? Want to connect with us? We are here to help.</h6>
+                    <h6 class="text-center text-capitalize pt-1 text-dark ">Choose the method that works best for you. We look forward to hearing from you.</h6>
+                    <hr class="w-50 mx-auto pt-5 mb-0">
+              <div class="row">
+                  <!-- <div class="container mb-2 mt-2"> -->
+                      <div class="col-lg-6 col-md-6 col-12">
+                        <div class="text-left text-dark bg-white p-4 mb-5 "style="margin-left: 100px;">
+                          <h4>Job Seekers</h4>
+                          <br>
+                          <h6>If you are a job seeker and would like to contact us, call us at:
+                          <br><br>
+                          Toll Free: 8-97-2923500
+                          <br><br>
+                          *Toll: +91-83-4688-6870<br>(Standard STD / ISD charges apply)
+                          <br><br>
+                          To know more about us follow us on :
+                          <br><br>
+                          <span>
+                             <i class="fab fa-google btn bg-white btn-outline-danger fa-2x mr-2" style=" color: #ff4000"></i>
+                              <i class="fab fa-facebook-square btn btn-outline-primary bg-white fa-2x mr-2" style=" color: #0000ff;border: 1px solid #0000ff; "></i>
+                              <i class="fab fa-twitter btn btn-outline-primary text-primary bg-white fa-2x mr-2" ></i>
+                               <i class="fab fa-instagram btn  bg-white fa-2x mr-2" style="color: #ff0080; border: 1px solid #ff0080 "></i>
+                              <i class="fab fa-linkedin btn btn-outline-primary  bg-white fa-2x mr-2" style=" color: #1842db; border: 1px solid #1842db; "></i>
+                              <i class="fab fa-github btn btn-outline-dark bg-white text-dark fa-2x mr-2"></i>
+                          </span>
+                          </h6>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-12">
+                        <div class="text-left text-dark bg-white p-4 mb-5" style="margin-right: 100px;">
+                          <h4>Employers</h4>
+                          <br>
+                          <h6>If you are a employer and would like to contact us, call us at:
+                          <br><br>
+                          Toll Free: 8-97-2923500
+                          <br><br>
+                          *Toll: +91-83-4688-6870<br>(Standard STD / ISD charges apply)
+                          <br><br>
+                          To know more about us follow us on :
+                          <br><br>
+                          <span >
+                             <i class="fab fa-google btn bg-white btn-outline-danger fa-2x mr-2" style=" color: #ff4000"></i>
+                              <i class="fab fa-facebook-square btn btn-outline-primary bg-white fa-2x mr-2" style=" color: #0000ff;border: 1px solid #0000ff; "></i>
+                              <i class="fab fa-twitter btn btn-outline-primary text-primary bg-white fa-2x mr-2" ></i>
+                               <i class="fab fa-instagram btn  bg-white fa-2x mr-2" style="color: #ff0080; border: 1px solid #ff0080 "></i>
+                              <i class="fab fa-linkedin btn btn-outline-primary  bg-white fa-2x mr-2" style=" color: #1842db; border: 1px solid #1842db; "></i>
+                              <i class="fab fa-github btn btn-outline-dark bg-white text-dark fa-2x mr-2"></i>
+                          </span>
+                          </h6>
+                        </div>
+                     <!--  </div> -->
+                   </div>
+                </div>
+         </div>
+    </section>
+
+      <!--  <section class="Team">
+              <div class="container-fluid">
+                  <h1 class="text-center text-capitalize pt-4 text-primary">The Team</h1>
+                  <hr class="w-25 mx-auto pt-5">
+                      <div class="container-fluid">
+
+                        <div class="row text-center ">
+                          <div class="col-lg-2 col-md-2 col-6 " style="margin-bottom: 200px;">
+                              <div class="card " style="height: 170px;">
+                            <img class="card-img-top " src="assets/images/soubhik.jpg" alt="Card image">
+                            <div class="card-body text-dark">
+                              <h4 class="card-title">Soubhik Laha</h4>
+                              <p class="card-text">CEO, Co-founder, Project Manager</p>
+                            </div>
+                          </div>
+                          </div>
+
+                          <div class="col-lg-2 col-md-2 col-6">
+                              <div class="card" style="height: 170px;">
+                            <img class="card-img-top" src="assets/images/ishita.jpg" alt="Card image">
+                            <div class="card-body text-dark">
+                              <h4 class="card-title">Ishita Nandy</h4>
+                              <p class="card-text">CTO, Co-founder</p>
+                            </div>
+                          </div>
+                          </div>
+
+                          <div class="col-lg-2  col-md-2 col-6">
+                              <div class="card" style="height: 170px;">
+                            <img class="card-img-top" src="assets/images/tuhin2.jpg" alt="Card image">
+                            <div class="card-body text-dark">
+                              <h4 class="card-title">Tuhin Khanra</h4>
+                              <p class="card-text">Co-founder ,Project Manager</p>
+                            </div>
+                          </div>
+                          </div>
+
+                          <div class="col-lg-2 col-md-2 col-6">
+                              <div class="card" style="height: 170px;">
+                            <img class="card-img-top" src="assets/images/proloy.jpg" alt="Card image">
+                            <div class="card-body text-dark">
+                              <h4 class="card-title">Proloy Das</h4>
+                              <p class="card-text">VP Producer</p>
+                            </div>
+                          </div>
+                          </div>
+
+                          <div class="col-lg-2 col-md-2 col-6">
+                              <div class="card" style="height: 170px;">
+                            <img class="card-img-top" src="assets/images/suvayan.jpg" alt="Card image">
+                            <div class="card-body text-dark">
+                              <h4 class="card-title">Suvayan Samanta</h4>
+                              <p class="card-text">Project Guide</p>
+                            </div>
+                          </div>
+                          </div>
+
+                          <div class="col-lg-2 col-md-2 col-6">
+                              <div class="card" style="height: 170px;">
+                            <img class="card-img-top" src="assets/images/mypic.jpg" alt="Card image">
+                            <div class="card-body text-dark">
+                              <h4 class="card-title">Tuhin Khanra</h4>
+                              <p class="card-text">Project Designer</p>
+                            </div>
+                          </div>
+                          </div>
+
+                        </div>
+                      </div>
+              </div>
+        </section> -->
+
+     <section >
+        <div class="unit-7 overlay" style="background-image: url('images/myfile.jpg');">
+            <div class="container text-center">
+                  <div class="row">
+                      <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                        <h2 >12000</h2>
+                        <br>
+                        <h5 class="text-info">Jobs</h5>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                        <h2 >6000</h2>
+                        <br>
+                        <h5 class="text-info">Members</h5>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                        <h2 >3500</h2>
+                        <br>
+                        <h5 class="text-info">Resumes</h5>
+                      </div>
+                      <div class="col-lg-3 col-md-3 col-sm-6 col-12">
+                        <h2 >3000</h2>
+                        <br>
+                        <h5 class="text-info">Company</h5>
+                      </div>
+                  </div>
+            </div>
+        </div>
+    </section>
+
+
+      <!-- <section class="clients">
+              <div class="container-fluid mb-4 ">
+                  <h1 class="text-center text-capitalize pt-5 text-primary">Happy Clients</h1>
+                  <hr class="w-25 mx-auto pt-5">
+                      <div class="container mb-4">
+
+                        <div class="row text-center ml-5">
+                          <div class="col-lg-4 col-md-4 col-12">
+                              <div class="card " style="width: 310px;" >
+                            <img class="card-img-top " src="assets/images/harita.jpg" alt="Card image">
+                            <div class="card-body text-dark">
+                               <h4 class="card-title">Harita Shaw</h4>
+                               <p class="card-text">Director</p>
+                              <a href="#" class="btn btn-primary">See Profile</a>
+                            </div>
+                          </div>
+                          </div>
+
+                          <div class="col-lg-4 col-md-4 col-12">
+                              <div class="card" style="width: 310px; height: 375px;">
+                            <img class="card-img-top" src="assets/images/ritika.jpg" alt="Card image">
+                            <div class="card-body text-dark">
+                              <h4 class="card-title">Anil Manna</h4>
+                      <p class="card-text">Human Resourse Manager</p>
+                      <a href="#" class="btn btn-primary">See Profile</a>
+                            </div>
+                          </div>
+                          </div>
+
+                          <div class="col-lg-4  col-md-4 col-12">
+                              <div class="card" style="width: 310px;">
+                            <img class="card-img-top" src="assets/images/getpic.jpg" alt="Card image">
+                            <div class="card-body text-dark">
+                             <h4 class="card-title">Hitesh Shaw</h4>
+                      <p class="card-text">HR Manager</p>
+                      <a href="#" class="btn btn-primary">See Profile</a>
+                            </div>
+                          </div>
+                          </div>
+
+                          <div class="col-lg-4 mt-5 mb-5 col-md-4 col-12">
+                              <div class="card" style="width: 310px;">
+                            <img class="card-img-top" src="assets/images/tuhin.jpg" style=" height: 210px;" alt="Card image">
+                            <div class="card-body text-dark">
+                              <h4 class="card-title">Tuhin Khanra</h4>
+                              <p class="card-text">Assistant Manager</p>
+                              <a href="#" class="btn btn-primary">See Profile</a>
+                            </div>
+                          </div>
+                          </div>
+
+                          <div class="col-lg-4 mb-5 mt-5 col-md-6 col-12">
+                              <div class="card" style="width: 310px;">
+                            <img class="card-img-top" src="assets/images/man1.jpg" alt="Card image">
+                            <div class="card-body text-dark">
+                              <h4 class="card-title">Simon Pulok</h4>
+                              <p class="card-text">Hr Recruiter</p>
+                              <a href="#" class="btn btn-primary">See Profile</a>
+                            </div>
+                          </div>
+                          </div>
+
+                          <div class="col-lg-4 mb-5 mt-5 col-md-4 col-12">
+                              <div class="card" style="width: 310px;">
+                            <img class="card-img-top" src="assets/images/man2.jpg" alt="Card image">
+                            <div class="card-body text-dark">
+                              <h4 class="card-title">Dani Dan</h4>
+                              <p class="card-text">Marketting Head</p>
+                              <a href="#" class="btn btn-primary">See Profile</a>
+                            </div>
+                          </div>
+                          </div>
+
+                        </div>
+                      </div>
+              </div>
+        </section> -->
+</main>
+
+                <FOOTER >
+                  <div class="bg-info mb-2 mt-0">
+                           <div class="p-4 text-center text-white" >
+                                <h4 class="h1"><i class="fa fa-phone"></i> +91 9933587910</h4>
+                                <p class="h5">For more information call us now</p>
+                                <button class="btn btn-warning">Contact Now</button>
+                           </div>
+                  </div>
+                   <p class="text-center bg-primary p-4 text-white"> @copyright OnlineJobPortal.com 2020 </p>
+
+                </FOOTER>
+
+              </div>
+          </div>
+</body>
+</html>
