@@ -4,7 +4,28 @@
     Author     : Tanmoy
 --%>
 
+<%
+    String id= (String)session.getAttribute("sessionid1");
+if(id==null){
+%>
+<jsp:forward page="LOGIN_TEACHER.jsp" />
+<%
+}
+%>
+
+<%@page import="java.sql.PreparedStatement"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.ResultSet"%>
+<%@page import="java.sql.Statement"%>
+<%@page import="java.sql.Connection"%>
+<%@page import="DaoImplement.DbConnectionImpl"%>
+<%@page import="DaoInterface.QueryInterface"%>
+<%@page import="javax.servlet.http.HttpServletRequest"%>
+
+
+<%@page import="login.database.*"%>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -82,6 +103,22 @@ body {
 
 <body id="page-top" >
 
+     <%
+try{
+    
+Connection connection=null;
+connection =  DbConnectionImpl.getConnection();
+
+
+
+PreparedStatement preparedStatement=connection.prepareStatement(QueryInterface.MatchTeacherPersonalSQL);
+
+preparedStatement.setString(1, id);
+ResultSet resultSet = null;
+resultSet = preparedStatement.executeQuery();
+while(resultSet.next()){
+%>
+
     <!-- Page Wrapper -->
     <div id="wrapper" style="background: #2C6E8B">
 
@@ -90,9 +127,9 @@ body {
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
+                <!-- <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
-                </div>
+                </div> -->
                 <!-- <div class="sidebar-brand-text mx-3">S R M S<sup>2</sup></div> -->
                 <div class="sidebar-brand-text mx-3 h3">S R M S</div>
             </a>
@@ -160,7 +197,7 @@ body {
             <li class="nav-item">
                 <a class="nav-link collapsed" href="Teachers.html" >
                    <!--  <i class="fas fa-fw fa-folder"></i> -->
-                    <span>Teachers</span>
+                    <span>Students</span>
                 </a>
                 <!-- <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -177,11 +214,7 @@ body {
             </li>
 
             <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <!-- <i class="fas fa-fw fa-chart-area"></i> -->
-                    <span>Feedback</span></a>
-            </li>
+           
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
@@ -240,7 +273,7 @@ body {
                     
  -->
                     <!-- Topbar Navbar -->
-                    <h3 style="color:#fff ">Welcome, STUDENT</h3>
+                    <h3 style="color:#fff ">Welcome, <%=resultSet.getString("TEACHER_NAME") %></h3>
                     <button class="btn btn-light ml-auto">Sign Out</button>
                     
 
@@ -260,8 +293,8 @@ body {
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Resume</a>
+                        <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-download fa-sm text-white-50"></i> Generate Resume</a> -->
                     </div>
 
                     <!-- Content Row -->
@@ -276,7 +309,7 @@ body {
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                                 </div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">
-                                            	<center><a href="STUDENT_APPLICATION_FORM.html" style="color: #fff;">Edit Application Form</a></center>
+                                            	<center><a href="STUDENT_APPLICATION_FORM.html" style="color: #fff;">Edit Personal Details</a></center>
                                             </div>
                                         </div>
                                        <!--  <div class="col-auto">
@@ -369,103 +402,42 @@ body {
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Your Profile </h6>
-                                    <!-- <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="#">Action</a>
-                                            <a class="dropdown-item" href="#">Another action</a>
-                                            <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="#">Something else here</a>
-                                        </div>
-                                    </div> -->
+                                    
                                 </div>
-                                <!-- Card Body -->
-                                <!-- <div class="card-body">
-                                    <div class="chart-area">
-                                        <canvas id="myAreaChart"></canvas>
-                                    </div>
-                                </div> -->
-                                <div class="card-body" >
-                                    <div class="chart-area">
-                                        <!--  <canvas id="myAreaChart"></canvas> -->
-                                        <div class="row" >
-										  <div class="column" style="margin-top: 5px;">
-										    <div class="card border-left-info shadow text-info" >NAME:</div>
-										    
-										  </div>
-										  <div class="column" style="margin-top: 5px;">
-										    <div class="card border-left-warning shadow text-warning" >COUNTRY:</div>
-										  </div>
-										 
-									<!-- 	</div>
 
-
-										<div class="row" style="margin-top: 25px;"> -->
-											  <div class="column" style="margin-top: 5px;">
-										    <div class="card border-left-primary shadow text-primary" >STATE:</div>
-										  </div>
-
-										    <div class="column" style="margin-top: 5px;">
-										    <div class="card border-left-success shadow text-success" >CITY:</div>
-										  </div>
-
-											 <div class="column" style="margin-top: 5px;">
-										    <div class="card border-left-info shadow text-info" >D.O.B:</div>
-										  </div>
-										  <div class="column" style="margin-top: 5px;">
-										    <div class="card border-left-warning shadow text-warning" >CONTACT NUMBER:</div>
-										  </div>
-									<!-- 	</div>
-
-										<div class="row" style="margin-top: 25px;"> -->
-										  <div class="column" style="margin-top: 5px;">
-										    <div class="card border-left-primary shadow text-primary" >GENDER:</div>
-										  </div>
-										  <div class="column" style="margin-top: 5px;">
-										    <div class="card border-left-success shadow text-success" >FATHERS NAME:</div>
-										  </div>
-									<!-- 	</div>
-
-										<div class="row" style="margin-top: 25px;"> -->
-										  <div class="column" style="margin-top: 5px;">
-										    <div class="card border-left-info shadow text-info" >GUARDIAN'S OCCUPATION:</div>
-										  </div>
-										  <div class="column" style="margin-top: 5px;">
-										    <div class="card border-left-warning shadow text-warning" >GUARDIAN'S CONTACT NO:</div>
-										  </div>
-									<!-- 	</div>
-
-										<div class="row mb-4" style="margin-top: 50px; "> -->
-										  <div class="column" style="margin-top: 5px;"> 
-										    <div class="card border-left-primary shadow text-primary" >MOTHER'S NAME:</div>
-										  </div>
-										  <div class="column" style="margin-top: 5px;">
-										    <div class="card border-left-success shadow table-success" >MOTHER'S OCCUPATION: </div>
-										  </div>
-										<!-- </div>
-
-										<div class="row" style="margin-top: 25px;"> -->
-										  <div class="column" style="margin-top: 5px;">
-										    <div class="card border-left-info shadow text-info" style="text-align: left;">AADHAR NO:</div>
-										  </div>
-										  <div class="column" style="margin-top: 5px;">
-										    <div class="card border-left-warning shadow text-warning" style="text-align: left;">PAN NO:</div>
-										  </div>
-										</div>
-
-
-                                    </div>
-                                </div> 
+                               <!--  <section class="profile-area card"> -->
+                      <div class="profile-content card-body d-flex">
+                          <div class="user-image-wrap mr-5">
+                              <img src="assets/img/profile-photo.png" alt="">
+                          </div>
+                          <div class="user-about">
+                               <h2 class="text-danger">  <%=resultSet.getString("TEACHER_NAME") %></h2>
+<!--                              <p><strong>(Mathematics & Accounting Teacher)</strong></p>-->
+                              
+                              <p>Email: <%=resultSet.getString("TEACHER_EMAIL") %></p>
+                              <p>Phone: <%=resultSet.getString("CONTACT_NO") %></p>
+                              <p>Country: <%=resultSet.getString("COUNTRY") %></p>
+                              <p>State: <%=resultSet.getString("STATE") %></p>
+                              <p>Area: <%=resultSet.getString("AREA") %></p>
+                              <p>DOB: <%=resultSet.getString("DOB") %></p>
+                              <p>Gender: <%=resultSet.getString("GENDER") %></p>
+                              <p>Aadhar Number: <%=resultSet.getString("AADHAR_NO") %></p>
+                                                           <!-- <a href="" class="btn btn-outline-danger pl-4 pr-4">Edit</a> -->
+                          </div>
+                      </div>
+                <!-- </section> -->
+                             
                             </div>
                         </div>
+                    </div>
 
+<% 
+}
 
-
+} catch (Exception e) {
+e.printStackTrace();
+}
+%>
                         
 </body>
 

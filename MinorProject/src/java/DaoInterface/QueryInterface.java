@@ -6,4 +6,6 @@ public interface QueryInterface {
     String MatchTeacherLoginInfoSQL="select * from teacher where TEACHER_ID = ? and TEACHER_PASSWORD = ? ";
     String FetchStudentDetailsSQL="select * from student where STUDENT_ID = ?";
     String FetchStudentSemSubjectsSQL="select * from subject where SEMESTER = ?";
+    String FetchTeacherDetailsSQL="select * from teacher where TEACHER_ID = ?";
+    String MatchTeacherPersonalSQL="select * from teacher_personal where TEACHER_ID = ?";
 }

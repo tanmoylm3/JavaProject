@@ -1,0 +1,2 @@
+GIT CONFLICT RESOLVE: git reset --hard FETCH_HEAD
+
