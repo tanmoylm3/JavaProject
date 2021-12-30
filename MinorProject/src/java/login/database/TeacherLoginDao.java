@@ -13,12 +13,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import login.bean.LoginBean;
 
-/**
- *
- * @author Tanmoy
- */
+
 public class TeacherLoginDao {
-    public boolean validate(LoginBean loginBean) throws ClassNotFoundException {
+    public boolean validate(LoginBean loginBean1) throws ClassNotFoundException {
         boolean status = false;
 
        
@@ -28,9 +25,9 @@ public class TeacherLoginDao {
             connection =  DbConnectionImpl.getConnection();
 
             // Step 2:Create a statement using connection object
-            PreparedStatement preparedStatement=connection.prepareStatement(QueryInterface.MatchLoginInfoSQL);
-            preparedStatement.setString(1, loginBean.getUsername());
-            preparedStatement.setString(2, loginBean.getPassword());
+            PreparedStatement preparedStatement=connection.prepareStatement(QueryInterface.MatchTeacherLoginInfoSQL);
+            preparedStatement.setString(1, loginBean1.getUsername());
+            preparedStatement.setString(2, loginBean1.getPassword());
 
             System.out.println(preparedStatement);
             ResultSet rs = preparedStatement.executeQuery();
@@ -60,5 +57,3 @@ public class TeacherLoginDao {
         }
     }
 }
-
-

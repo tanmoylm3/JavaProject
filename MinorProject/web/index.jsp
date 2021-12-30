@@ -129,7 +129,7 @@
           		</div>
          		 <div class="modal-body">
            	 	 	<button class="btn btn-outline-success btn-circle" style="margin-left: 55px;"><a href="LOGIN_STUDENT.jsp"> Student</a></button>
-            	 	<button class="btn btn-outline-primary btn-circle "><a href="LOGIN_TEACHER.html">Teacher</a></button>
+            	 	<button class="btn btn-outline-primary btn-circle "><a href="LOGIN_TEACHER.jsp">Teacher</a></button>
             		<button class="btn btn-outline-warning btn-circle"><a href="LOGIN_ADMIN.html">Admin</a></button>
           		</div>
           		<div class="modal-footer">

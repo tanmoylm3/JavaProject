@@ -299,7 +299,7 @@ while(resultSet.next()){
                     
  -->
                     <!-- Topbar Navbar -->
-                    <h3 style="color:#fff ">Welcome  <%=resultSet.getString("STU_NAME") %></h3>
+                    <h3 style="color:#fff ">Welcome  <%=resultSet.getString("STUDENT_NAME") %></h3>
                     <button class="btn btn-light ml-auto" ><a href="LOGOUT.jsp">Sign Out</a></button>
                     
 
@@ -455,7 +455,7 @@ while(resultSet.next()){
                                         <!--  <canvas id="myAreaChart"></canvas> -->
                                         <div class="row" >
 										  <div class="column" style="margin-top: 5px;">
-										    <div class="card border-left-info shadow text-info">NAME:  <%=resultSet.getString("STU_NAME") %></div>
+										    <div class="card border-left-info shadow text-info">NAME:  <%=resultSet.getString("STUDENT_NAME") %></div>
 										    
 										  </div>
 										  <div class="column" style="margin-top: 5px;">
@@ -475,7 +475,7 @@ while(resultSet.next()){
 										  </div>
 
 											 <div class="column" style="margin-top: 5px;">
-										    <div class="card border-left-info shadow text-info" >AREA:  <%=resultSet.getString("AREA_") %></div>
+										    <div class="card border-left-info shadow text-info" >AREA:  <%=resultSet.getString("AREA") %></div>
 										  </div>
 										  <div class="column" style="margin-top: 5px;">
 										    <div class="card border-left-warning shadow text-warning" >D.O.B:  <%=resultSet.getString("DOB") %></div>
